@@ -3,6 +3,7 @@
 .libPaths(c("/workspace/fig4/Rlib", .libPaths()))
 library(data.table)
 source("/workspace/fig4/mr_core.R")
+set.seed(20261103)  # reproducible weighted-median parametric bootstrap (mr_core.R mr_wmedian, nboot=1000)
 RAW <- "/workspace/fig4/raw"; QC <- "/workspace/fig4/qc"; REG <- "/workspace/fig4/regions"
 REXP <- "/workspace/fig4/regions_exp"; PANEL <- file.path(RAW, "EUR38s")
 dir.create(file.path(QC, "ld"), showWarnings = FALSE)
